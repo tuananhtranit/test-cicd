@@ -7,6 +7,7 @@ jobs:
   call-job1:
     uses: tuananhtranit/test-cicd/.github/workflows/wf.yml@main
   job4:
+    needs: [jobs.job1.name]
     runs-on: ubuntu-latest
     steps:
       - id: id4
