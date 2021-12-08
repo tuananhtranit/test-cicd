@@ -11,8 +11,8 @@ on:
       dev_env:
         description: 'dev environment'
         required: true
-        options:
-          - dev2
+        type: choice
+        options: [dev, dev2]
 
 env:
   SERVERR: TUAN_TRAN_CHILD
