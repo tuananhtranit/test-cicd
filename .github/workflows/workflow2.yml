@@ -6,15 +6,10 @@ on:
 jobs:
   call-job1:
     uses: workflows/workflow.yml@id1
-    runs-on: ubuntu-latest
-    steps:
-      - id: id1
-        run: |
-          echo "Hello world job 1"
   job4:
     runs-on: ubuntu-latest
     needs: [job3]
     steps:
-      - id: id1
+      - id: id4
         run: |
           echo "Hello world job 2"
