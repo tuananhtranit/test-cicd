@@ -8,13 +8,29 @@ on:
       - '*'
   workflow_dispatch:
 
+env:
+  SERVERR: TUAN_TRAN_CHILD
+
 jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - id: id133
+        run: |
+          echo "Hello world job 1"
+          echo ${{ env.SERVERR }}
+          echo ${{ env.SERVER }}
+  call-job1:
+    uses: tuananhtranit/test-cicd/.github/workflows/wf.yml@main
   job1:
+    needs: [call-job1]
     runs-on: ubuntu-latest
     steps:
       - id: id1
         run: |
           echo "Hello world job 1"
+          echo ${{ env.SERVERR }}
+          echo ${{ env.SERVER }}
   job2:
     if: contains(github.event.head_commit.message, '[include job2]') || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest

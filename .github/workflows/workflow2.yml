@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-job1:
-    uses: tuananhtranit/test-cicd/blob/main/.github/workflows/wf.yml@main
   job4:
     runs-on: ubuntu-latest
-    needs: [job3]
     steps:
       - id: id4
         run: |
           echo "Hello world job 2"
+  call-job1:
+    needs: [job4]
+    uses: ./.github/workflows/wf.yml@main
