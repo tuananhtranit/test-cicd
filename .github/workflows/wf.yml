@@ -1,3 +1,5 @@
+name: "General"
+
 on:
   workflow_call:
 
