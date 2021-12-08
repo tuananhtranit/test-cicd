@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'feature branch'
+        description: 'dev environment'
         required: true
         default: 'dev2'
 
