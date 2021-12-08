@@ -14,4 +14,10 @@ jobs:
     steps:
       - id: id1
         run: |
-          echo "Hello world"
+          echo "Hello world job 1"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - id: id1
+        run: |
+          echo "Hello world job 2"
