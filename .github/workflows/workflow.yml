@@ -13,7 +13,6 @@ env:
 
 jobs:
   job1:
-    needs: [call-job1]
     runs-on: ubuntu-latest
     steps:
       - id: id1
