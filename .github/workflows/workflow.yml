@@ -15,7 +15,7 @@ jobs:
     needs: [call-job1]
     runs-on: ubuntu-latest
     steps:
-      - id: ${{ env.SERVER }}
+      - id: id1
         run: |
           echo "Hello world job 1"
   job2:
