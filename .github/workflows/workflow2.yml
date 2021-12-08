@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  job3:
+  call-job1:
+    uses: workflows/workflow.yml@id1
     runs-on: ubuntu-latest
     steps:
       - id: id1
