@@ -23,7 +23,7 @@ jobs:
   call-job1:
     uses: tuananhtranit/test-cicd/.github/workflows/wf.yml@main
     with:
-      jobs.id11.needs: [first_job]
+      jobs.id11.needs: [job0]
   job1:
     needs: [call-job1]
     runs-on: ubuntu-latest
