@@ -6,14 +6,12 @@ env:
   SERVER: TUAN_TRAN_PARENT
 
 jobs:
-
   job0:
     runs-on: ubuntu-latest
     steps:
       - id: id122
         run: |
           echo "Hello world job 1"
-
   job1:
     runs-on: ubuntu-latest
     steps:

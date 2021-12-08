@@ -12,4 +12,4 @@ jobs:
           echo "Hello world job 2"
   call-job1:
     needs: [job4]
-    uses: ./.github/workflows/wf.yml@main
+    uses: tuananhtranit/test-cicd/.github/workflows/wf.yml@main
