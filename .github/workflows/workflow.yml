@@ -1,0 +1,17 @@
+name: "continuous integration and deployment"
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - id: id1
+        run: |
+          echo "Hello world"
