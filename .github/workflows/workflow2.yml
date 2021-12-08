@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-job1:
-    uses: tuananhtranit/test-cicd/blob/main/.github/workflows/wf.yml@main
+#  call-job1:
+#    uses: tuananhtranit/test-cicd/blob/main/.github/workflows/wf.yml@main
   job4:
     runs-on: ubuntu-latest
     needs: [job3]
