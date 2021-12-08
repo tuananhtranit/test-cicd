@@ -30,7 +30,7 @@ jobs:
     needs: [build]
     if: contains('
       refs/heads/develop
-      ', github.ref) || startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+      ', github.ref) || startsWith(github.ref, 'refs/tags/')
     steps:
       - id: id122
         run: |
