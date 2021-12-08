@@ -12,8 +12,18 @@ env:
   SERVERR: TUAN_TRAN_CHILD
 
 jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - id: id133
+        run: |
+          echo "Hello world job 1"
+          echo ${{ env.SERVERR }}
+          echo ${{ env.SERVER }}
   call-job1:
     uses: tuananhtranit/test-cicd/.github/workflows/wf.yml@main
+    with:
+      jobs.id11.needs: [first_job]
   job1:
     needs: [call-job1]
     runs-on: ubuntu-latest
