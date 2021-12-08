@@ -20,16 +20,44 @@ jobs:
           echo "Hello world job 1"
           echo ${{ env.SERVERR }}
           echo ${{ env.SERVER }}
-  deployToDev:
+  jfrogDeploy:
     runs-on: ubuntu-latest
     needs: [build]
+    steps:
+      - id: id122
+        run: |
+          echo "Hello world job 2"
+  buildImage:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - id: id122
+        run: |
+          echo "Hello world job 2"
+  helmPackage:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - id: id122
+        run: |
+          echo "Hello world job 2"
+  pushImageToACR:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - id: id122
+        run: |
+          echo "Hello world job 2"
+  deployToDev:
+    runs-on: ubuntu-latest
+    needs: [ build, helmPackage, pushImageToACR ]
     steps:
       - id: id1
         run: |
           echo "Hello world job 2"
   deployToBdd:
     runs-on: ubuntu-latest
-    needs: [ build, deployToDev ]
+    needs: [ build, helmPackage, pushImageToACR, deployToDev ]
     steps:
       - id: id1
         run: |
