@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  SERVERR: TUAN_TRAN
+  SERVERR: TUAN_TRAN_CHILD
 
 jobs:
   call-job1:

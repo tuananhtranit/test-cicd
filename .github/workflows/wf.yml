@@ -3,7 +3,7 @@ name: "General"
 on:
   workflow_call:
 env:
-  SERVER: TUAN_TRAN
+  SERVER: TUAN_TRAN_PARENT
 
 jobs:
   job1:
