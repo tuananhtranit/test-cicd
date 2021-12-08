@@ -1,22 +1,16 @@
-name: "continuous integration and deployment"
+name: "Manually"
 
 on:
-  push:
-    branches-ignore:
-      - 'main'
-    tags:
-      - '*'
   workflow_dispatch:
 
 jobs:
-  job1:
+  job3:
     runs-on: ubuntu-latest
     steps:
       - id: id1
         run: |
           echo "Hello world job 1"
-  job2:
-    if: contains(github.event.head_commit.message, '[include job2]') || github.event_name == 'workflow_dispatch'
+  job4:
     runs-on: ubuntu-latest
     needs: [job1]
     steps:
