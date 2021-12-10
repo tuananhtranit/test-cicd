@@ -82,6 +82,7 @@ jobs:
       refs/heads/develop
       ', github.ref) || startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    environment: bdd
     needs: [ build, helmPackage, pushImageToACR, deployToDev ]
     steps:
       - id: id1
