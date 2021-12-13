@@ -12,8 +12,8 @@ on:
         description: 'environment'
         required: true
         type: choice
-        options: [dev, dev2, bdd]
-        default: ""
+        options: [dev, dev2, bdd, default]
+        default: default
 
 env:
   SERVERR: TUAN_TRAN_CHILD
