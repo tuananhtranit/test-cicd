@@ -9,15 +9,10 @@ on:
   workflow_dispatch:
     inputs:
       dev_env:
-        description: 'dev environment'
-        required: true
+        description: 'environment'
+        required: false
         type: choice
-        options: [none, dev, dev2]
-      bdd_env:
-        description: 'bdd environment'
-        required: true
-        type: choice
-        options: [ none, bdd ]
+        options: [dev, dev2, bdd]
 
 env:
   SERVERR: TUAN_TRAN_CHILD
