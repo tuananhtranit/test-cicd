@@ -83,9 +83,9 @@ jobs:
         run: |
           echo "Hello world job 2"
   deployToBdd:
-    if: contains('
+    if: (contains('
       refs/heads/develop
-      ', github.ref) || startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && github.event.inputs.bdd_env == 'bdd')
+      ', github.ref) || startsWith(github.ref, 'refs/tags/') && github.event_name != 'workflow_dispatch') || (github.event_name == 'workflow_dispatch' && github.event.inputs.bdd_env == 'bdd')
     runs-on: ubuntu-latest
     environment:
       name: bdd
