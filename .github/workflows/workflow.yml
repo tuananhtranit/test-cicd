@@ -7,9 +7,6 @@ on:
     tags:
       - '*'
   workflow_dispatch:
-    push:
-      branches:
-        - feature/feature33
     inputs:
       dev_env:
         description: 'environment'
@@ -17,6 +14,7 @@ on:
         type: choice
         options: [default, dev, dev2, bdd]
         default: default
+
 
 env:
   SERVERR: TUAN_TRAN_CHILD
