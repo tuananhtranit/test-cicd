@@ -10,9 +10,10 @@ on:
     inputs:
       dev_env:
         description: 'environment'
-        required: false
+        required: true
         type: choice
         options: [dev, dev2, bdd]
+        default: ""
 
 env:
   SERVERR: TUAN_TRAN_CHILD
